@@ -53,7 +53,7 @@ public class otelo {
 			int pemain=1;
 			
 			public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
+
 				JButton thisButton = (JButton)e.getSource();
 				String s = thisButton.getText();
 				String[] hasil = s.split(",");
@@ -66,7 +66,7 @@ public class otelo {
 					pemain=0;
 				
 					if(thisButton.getIcon()==null) {
-=======
+
 
 						thisButton.setIcon(icon);
 					}
@@ -75,12 +75,12 @@ public class otelo {
 				else
 				{
 					Icon icon = new ImageIcon("D:\\black.png");
-<<<<<<< HEAD
+
 					pemain=1;
 					
 					if(thisButton.getIcon()==null) {
 						thisButton.setIcon(icon);
-=======
+
 					
 					
 					}
@@ -90,13 +90,13 @@ public class otelo {
 				
 			}
 		};
-<<<<<<< HEAD
+
 		JButton button = new JButton("0,0");
 		button.setForeground(UIManager.getColor("Button.background"));
-=======
+
 		
-		JButton button = new JButton("");
->>>>>>> b3faf7e623b7a9716facd3e4305276d0c0a3a1ca
+		
+
 		button.addActionListener(bl);
 		button.setBounds(23, 23, 49, 39);
 		frame.getContentPane().add(button);
