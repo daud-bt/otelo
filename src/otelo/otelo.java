@@ -8,6 +8,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.net.URL;
 import java.awt.event.ActionEvent;
 
 public class otelo {
@@ -50,14 +51,15 @@ public class otelo {
 			int pemain=1;
 			
 			public void actionPerformed(ActionEvent e) {
-				
+			
 				if(pemain==1)
 				{
 					Icon icon = new ImageIcon("D:\\white.png");
-					pemain=0;
+					
 					JButton thisButton = (JButton)e.getSource();
-					if(thisButton.equals(" "))
-					{
+					if(thisButton.getIcon() == null)
+					{pemain=0;
+						//no icon : do smthing here
 						thisButton.setIcon(icon);
 					}
 					
@@ -65,14 +67,27 @@ public class otelo {
 				else
 				{
 					Icon icon = new ImageIcon("D:\\black.png");
-					pemain=1;
+					
 					JButton thisButton = (JButton)e.getSource();
-					thisButton.setIcon(icon);
+					if(thisButton.getIcon() == null)
+					{
+						pemain=1;
+						//no icon : do smthing here
+						thisButton.setIcon(icon);
+						
+						//test code
+						//Debugging
+						URL c = thisButton.getClass().getResource("D:\\white.png");
+						c = thisButton.getClass().getResource("D:\\black.png");
+//						ImageIcon white = new ImageIcon(this.getClass().getResource("D:\\white.png"));
+//						ImageIcon black = new ImageIcon(this.getClass().getResource("D:\\black.png"));
+					}
 				}
 				
 				
 			}
 		};
+		
 		JButton button = new JButton("");
 		button.addActionListener(bl);
 		button.setBounds(23, 23, 49, 39);
@@ -80,6 +95,11 @@ public class otelo {
 		
 		JButton button_1 = new JButton("");
 		button_1.addActionListener(bl);
+		
+//		if (button_1.getIcon().equals(white) ) {
+//			button_1.setText("haha");
+//		}
+		
 		button_1.setBounds(82, 23, 49, 39);
 		frame.getContentPane().add(button_1);
 		
