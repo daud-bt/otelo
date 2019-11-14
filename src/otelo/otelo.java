@@ -62,27 +62,20 @@ public class otelo {
 				
 				if(pemain==1)
 				{
-					Icon icon = new ImageIcon("D:\\white.png");
-					pemain=0;
-				
+					Icon icon = new ImageIcon("D:\\white.png");				
 					if(thisButton.getIcon()==null) {
-
-
+						pemain=0;
 						thisButton.setIcon(icon);
 					}
 					
 				}
 				else
 				{
-					Icon icon = new ImageIcon("D:\\black.png");
-
-					pemain=1;
-					
+					Icon icon = new ImageIcon("D:\\black.png");					
 					if(thisButton.getIcon()==null) {
-						thisButton.setIcon(icon);
+						pemain=1;
+						thisButton.setIcon(icon);			
 
-					
-					
 					}
 				}
 				
@@ -95,7 +88,7 @@ public class otelo {
 		button.setForeground(UIManager.getColor("Button.background"));
 
 		
-		
+
 
 		button.addActionListener(bl);
 		button.setBounds(23, 23, 49, 39);
